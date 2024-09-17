@@ -98,9 +98,10 @@ This pipeline is a comprehensive document analysis system, designed to automate 
 - **Vector Database**: Set up the connection details for the **RAG Vector Database** in `rag_config.yaml`.
 - **Mistral LLM**: Provide API keys for **Mistral LLM** integration in `ml_config.yaml`.
 
-### Contributions
-
-Contributions are welcome! Please submit a pull request or open an issue for any suggestions or improvements.
+### Contributor
+- **Alina Baber**
+- **Partab Rai**
+- **Suraksha Sadwani**
 
 ### License
 
