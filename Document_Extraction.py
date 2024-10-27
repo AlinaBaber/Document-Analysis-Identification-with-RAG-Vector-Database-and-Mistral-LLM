@@ -146,3 +146,37 @@ class RAGPDFAnalyzer:
         for section, query in sections_queries.items():
             response = self.generate_response(query)
             print(f"Response for {section}: {response}")
+
+analyzer = RAGPDFAnalyzer()
+import os
+import fitz
+
+def split_pdf_and_analyze(pdf_path):
+  # Create an instance of the DocumentAnalyzer
+  analyzer = RAGPDFAnalyzer()
+
+  # Open the PDF
+  doc = fitz.open(pdf_path)
+
+  # Iterate through each page in the PDF
+  for page_number in range(len(doc)):
+      page = doc.load_page(page_number)
+
+      # Create a temporary file path for the single-page PDF
+      temp_pdf_path = f'temp_page_{page_number + 1}.pdf'
+
+      # Create a new PDF for the current page
+      temp_doc = fitz.open()  # Create a new empty PDF
+      temp_doc.insert_page(pno=0)  # Insert a new page at position 0
+      temp_doc[0].show_pdf_page(temp_doc[0].rect, doc, page_number)  # Copy the current page
+      temp_doc.save(temp_pdf_path)  # Save the single-page PDF
+      temp_doc.close()
+
+      # Call the analyze_document method with the temporary file
+      analyzer.analyze_document(temp_pdf_path)
+
+      # Optionally, delete the temporary file if not needed
+      os.remove(temp_pdf_path)
+
+    # Close the original document
+  doc.close()
