@@ -1,4 +1,4 @@
-# Document Analysis Pipeline with RAG Vector Database and Mistral LLM
+# Document Analysis and identification with RAG Vector Database and Mistral LLM
 
 ## Overview
 
