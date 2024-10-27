@@ -2,7 +2,7 @@
 
 ## Overview
 
-This pipeline is a comprehensive document analysis system, designed to automate the processing and analysis of documents from acquisition to consumption. It integrates advanced machine learning and AI models like **RAG (Retrieval Augmented Generation) Vector Databases** and **Mistral LLM** to efficiently extract, match, enrich, and process document information. The pipeline covers:
+This project is a comprehensive document analysis system, designed to automate the processing and analysis of documents from acquisition to consumption. It integrates advanced machine learning and AI models like **RAG (Retrieval Augmented Generation) Vector Databases** and **Mistral LLM** to efficiently extract, match, enrich, and process document information. The pipeline covers:
 
 - **Document Acquisition**
 - **Document OCR (Optical Character Recognition)**
