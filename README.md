@@ -99,9 +99,6 @@ This pipeline is a comprehensive document analysis system, designed to automate 
 - **Mistral LLM**: Provide API keys for **Mistral LLM** integration in `ml_config.yaml`.
 
 ### Contributor
-- **Alina Baber**
-- **Partab Rai**
-- **Suraksha Sadwani**
 
 ### License
 
